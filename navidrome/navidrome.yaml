@@ -14,5 +14,5 @@ services:
       ND_LOGLEVEL: info  
       ND_SESSIONTIMEOUT: 24h
     volumes:
-      - "/home/pi/navidrome:/data"
-      - "/home/pi/hoard/music:/music:ro"
+      - "/home/sam/navidrome:/data"
+      - "/home/sam/hoard/music:/music:ro"
