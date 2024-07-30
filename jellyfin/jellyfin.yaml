@@ -7,7 +7,6 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=Etc/UTC
-      - JELLYFIN_PublishedServerUrl=192.168.0.5 #optional
     volumes:
       - /home/sam/jellyfin:/config
       - /home/sam/hoard/movies:/data/movies
