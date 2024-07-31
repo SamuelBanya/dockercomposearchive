@@ -15,4 +15,4 @@ services:
       ND_SESSIONTIMEOUT: 24h
     volumes:
       - "/home/sam/navidrome:/data"
-      - "/home/sam/hoard/music:/music:ro"
+      - "/home/sam/hoard/Music:/music:ro"
