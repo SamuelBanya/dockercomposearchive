@@ -3,12 +3,12 @@ services:
     container_name: immich_server
     image: ghcr.io/immich-app/immich-server:${IMMICH_VERSION:-release}
     volumes:
-      # Immich internal uploads
-      - ${UPLOAD_LOCATION}:/data
+      # Immich internal uploads (new photos)
+      - /home/sam/immich-app/library:/data
       # Host timezone
       - /etc/localtime:/etc/localtime:ro
-      # Optional: existing photos (read-only)
-      - /home/sam/immich-app/external:/external:ro
+      # External existing photos (read-only)
+      - "/home/sam/hoard/Photos Folder:/external:ro"
     ports:
       - '2283:2283'
     depends_on:
@@ -43,7 +43,7 @@ services:
       POSTGRES_DB: ${DB_DATABASE_NAME}
       POSTGRES_INITDB_ARGS: '--data-checksums'
     volumes:
-      - ${DB_DATA_LOCATION}:/var/lib/postgresql/data
+      - /home/sam/immich-app/db:/var/lib/postgresql/data
     shm_size: 128mb
     restart: always
     healthcheck:
