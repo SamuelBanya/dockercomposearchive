@@ -1,6 +1,50 @@
 services:
   immich-server:
     container_name: immich_server
+    image: ghcr.io/immich-app/immich-server:release
+
+    volumes:
+      # Immich internal library storage (managed copy)
+      - /home/sam/immich-app/library:/data
+
+      # External archive (read-only import source)
+      - "/home/sam/hoard/Photos Folder:/import:ro"
+
+      # Timezone
+      - /etc/localtime:/etc/localtime:ro
+
+    ports:
+      - "2283:2283"
+
+    depends_on:
+      - redis
+      - database
+
+    restart: always
+
+
+  redis:
+    container_name: immich_redis
+    image: docker.io/valkey/valkey:9
+    restart: always
+
+
+  database:
+    container_name: immich_postgres
+    image: ghcr.io/immich-app/postgres:14-vectorchord0.4.3-pgvectors0.2.0
+
+    environment:
+      POSTGRES_PASSWORD: immichpassword
+      POSTGRES_USER: immichuser
+      POSTGRES_DB: immich
+
+    volumes:
+      - /home/sam/immich-app/db:/var/lib/postgresql/data
+
+    restart: always
+services:
+  immich-server:
+    container_name: immich_server
     image: ghcr.io/immich-app/immich-server:${IMMICH_VERSION:-release}
     volumes:
       # Immich internal uploads (new photos)
