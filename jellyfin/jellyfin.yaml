@@ -10,6 +10,7 @@ services:
     volumes:
       - /home/sam/jellyfin:/config
       - /home/sam/hoard/Movies:/data/movies
+      - /home/sam/hoard/TVShows:/data/tv
     ports:
       - 8096:8096
     restart: unless-stopped
