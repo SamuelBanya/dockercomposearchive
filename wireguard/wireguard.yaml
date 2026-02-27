@@ -7,13 +7,13 @@ services:
     environment:
       - WG_HOST=${WG_HOST}
       - PASSWORD=${PASSWORD}
-      - INSECURE=false       # ensures HTTPS
-      - WG_PORT=51820        # WireGuard UDP port
+      - INSECURE=false
+      - WG_PORT=51820
     volumes:
       - ./wg-data:/etc/wireguard
       - /lib/modules:/lib/modules:ro
     ports:
-      - "51820:51820/udp"
+      - "51820:51820/udp"    # expose WireGuard UDP port
     restart: unless-stopped
     cap_add:
       - NET_ADMIN
@@ -32,9 +32,9 @@ services:
       - "80:80"
       - "443:443"
     volumes:
-      - ~/caddy/Caddyfile:/etc/caddy/Caddyfile
-      - ~/caddy/caddy-data:/data
-      - ~/caddy/caddy-config:/config
+      - /home/sam/caddy/Caddyfile:/etc/caddy/Caddyfile
+      - /home/sam/caddy/caddy-data:/data
+      - /home/sam/caddy/caddy-config:/config
     restart: unless-stopped
     networks:
       - wg
@@ -43,6 +43,3 @@ networks:
   wg:
     driver: bridge
     enable_ipv6: true
-
-volumes:
-  wg-data:
