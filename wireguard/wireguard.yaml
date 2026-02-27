@@ -4,13 +4,16 @@ services:
   wg-easy:
     image: ghcr.io/wg-easy/wg-easy:15
     container_name: wg-easy
-    env_file:
-      - ./.env
+    environment:
+      - WG_HOST=${WG_HOST}       # e.g., vpn.sambanya.com
+      - PASSWORD=${PASSWORD}     # wg-easy admin password
+      - INSECURE=false           # ensures HTTPS for wg-easy
+      - WG_PORT=51820
     volumes:
       - ./wg-data:/etc/wireguard
       - /lib/modules:/lib/modules:ro
     ports:
-      - "51820:51820/udp"    # WireGuard UDP port
+      - "51820:51820/udp"
     restart: unless-stopped
     cap_add:
       - NET_ADMIN
@@ -25,6 +28,9 @@ services:
   caddy:
     image: caddy:latest
     container_name: caddy
+    environment:
+      - BASIC_USER=${BASIC_USER}   # username for basic auth
+      - BASIC_PASS=${BASIC_PASS}   # password (to hash manually)
     ports:
       - "80:80"
       - "443:443"
