@@ -10,7 +10,7 @@ services:
       - INSECURE=false           # ensures HTTPS for wg-easy
       - WG_PORT=51820
     volumes:
-      - ./wg-data:/etc/wireguard
+      - /home/sam/wireguard/wg-data:/etc/wireguard
       - /lib/modules:/lib/modules:ro
     ports:
       - "51820:51820/udp"
