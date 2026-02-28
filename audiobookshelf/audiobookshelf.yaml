@@ -1,0 +1,12 @@
+services:
+  audiobookshelf:
+    image: ghcr.io/advplyr/audiobookshelf:latest
+    ports:
+      - 13378:80
+    volumes:
+      - /home/sam/hoard/Audiobooks:/audiobooks
+      - /home/sam/hoard/Podcasts:/podcasts
+      - /home/sam/audiobookshelf/config:/config
+      - /home/sam/audiobookshelf/metadata:/metadata
+    environment:
+      - TZ=America/Chicago
