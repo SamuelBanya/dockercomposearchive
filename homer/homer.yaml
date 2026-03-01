@@ -6,5 +6,4 @@ services:
     ports:
       - 8080:8080
     volumes:
-      - /home/sam/homer/config:/www/config
       - /home/sam/homer/assets:/www/assets
