@@ -2,9 +2,9 @@ services:
   homer:
     image: b4bz/homer
     container_name: homer
+    restart: unless-stopped
+    ports:
+      - 8080:8080
     volumes:
       - /home/sam/homer/config:/www/config
       - /home/sam/homer/assets:/www/assets
-    ports:
-      - 8080:8080
-    restart: unless-stopped
