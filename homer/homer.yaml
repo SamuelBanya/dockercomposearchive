@@ -3,6 +3,7 @@ services:
     image: b4bz/homer
     container_name: homer
     volumes:
+      - /home/sam/homer/config:/www/config
       - /home/sam/homer/assets:/www/assets
     ports:
       - 8080:8080
