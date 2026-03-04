@@ -1,7 +1,7 @@
 # !/bin/bash
 
 # These are just the 'wget' commands I used to grab the assets really quick:
-wget -O jellyfin.svg https://commons.wikimedia.org/wiki/File:Jellyfin_-_icon-transparent.svg
+wget -O jellyfin.svg https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/jellyfin.svg
 
 wget -O navidrome.svg https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/svg/navidrome.svg
 
@@ -11,7 +11,7 @@ wget -O kavita.svg https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/svg/kav
 
 wget -O immich.svg https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/svg/immich.svg
 
-wget -O syncthing.svg https://commons.wikimedia.org/wiki/File:Syncthing_Logo.svg
+wget -O syncthing.svg https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/syncthing.svg
 
 wget -O portainer.svg https://icon.icepanel.io/Technology/svg/Portainer.svg
 
