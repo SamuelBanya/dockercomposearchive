@@ -1,0 +1,46 @@
+NOTE:
+- These are the related directories that are needed to actually deploy any of my Docker Compose files on some other machine, and should maybe be considered for an automation process to manually create the related directories, and make them accessible by the typical 'Docker' user:
+
+Audiobookshelf:
+- /home/sam/audiobookshelf
+- /home/sam/audiobookshelf/config
+- /home/sam/audiobookshelf/metadata
+
+Caddy:
+- /home/sam/caddy
+- /home/sam/caddy/Caddyfile
+- /home/sam/caddy/config
+- /home/sam/caddy/data
+
+Homer:
+- /home/sam/homer
+- /home/sam/homer/assets
+
+Immich:
+- /home/sam/immich
+- /home/sam/library
+
+Jellyfin:
+- /home/sam/jellyfin
+
+Kavita:
+- /home/sam/kavita
+
+Mealie:
+- /home/sam/mealie
+- /home/sam/mealie/data
+
+Microbin:
+- /home/sam/microbin
+- /home/sam/microbin/microbin_data
+
+Navidrome:
+- /home/sam/navidrome
+
+Syncthing:
+- /home/sam/syncthing
+- /home/sam/syncthing/config
+
+Wireguard:
+- /home/sam/wireguard
+- /home/sam/wireguard/wg-data
