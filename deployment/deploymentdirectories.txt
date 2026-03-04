@@ -37,9 +37,6 @@ Microbin:
 Navidrome:
 - /home/sam/navidrome
 
-Rustdesk:
-- /home/sam/rustdesk/data
-
 Syncthing:
 - /home/sam/syncthing
 - /home/sam/syncthing/config
