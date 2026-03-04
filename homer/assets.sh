@@ -18,3 +18,5 @@ wget -O portainer.svg https://icon.icepanel.io/Technology/svg/Portainer.svg
 wget -O mealie.svg https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/mealie.svg
 
 wget -O microbin.png https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/microbin.png
+
+wget -O bentopdf.png https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/bentopdf.png
