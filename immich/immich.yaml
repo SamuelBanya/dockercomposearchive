@@ -23,6 +23,25 @@ services:
     restart: always
 
 
+  immich-microservices:
+    container_name: immich_microservices
+    image: ghcr.io/immich-app/immich-server:${IMMICH_VERSION}
+    command: ["start.sh", "microservices"]
+
+    volumes:
+      # Immich internal managed library storage
+      - ${UPLOAD_LOCATION}:/data
+
+      # Host timezone
+      - /etc/localtime:/etc/localtime:ro
+
+    depends_on:
+      - redis
+      - database
+
+    restart: always
+
+
   redis:
     container_name: immich_redis
     image: docker.io/valkey/valkey:9
