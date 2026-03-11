@@ -39,6 +39,10 @@ services:
       - redis
       - database
 
+    environment:
+      REDIS_HOST: immich_redis
+      REDIS_PORT: 6379
+
     restart: always
 
 
