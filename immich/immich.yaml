@@ -15,9 +15,6 @@ services:
       # Host timezone
       - /etc/localtime:/etc/localtime:ro
 
-    env_file:
-      - .env
-
     ports:
       - "2283:2283"
 
