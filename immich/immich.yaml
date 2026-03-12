@@ -35,9 +35,6 @@ services:
     volumes:
       - model-cache:/cache
 
-    env_file:
-      - .env
-
     restart: always
 
     healthcheck:
