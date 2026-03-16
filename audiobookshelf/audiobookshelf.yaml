@@ -6,6 +6,7 @@ services:
     volumes:
       - /home/sam/hoard/Audiobooks:/audiobooks
       - /home/sam/hoard/Podcasts:/podcasts
+      - /home/sam/hoard/Books:/books
       - /home/sam/audiobookshelf/config:/config
       - /home/sam/audiobookshelf/metadata:/metadata
     environment:
