@@ -1,3 +1,6 @@
+# This was obtained here:
+# https://hub.docker.com/r/matszwe02/ytdlp_web_player
+
 services:
     ytdlp_web_player:
         # build: .
