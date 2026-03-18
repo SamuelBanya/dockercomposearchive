@@ -22,3 +22,7 @@ wget -O microbin.png https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png
 wget -O bentopdf.png https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/bentopdf.png
 
 wget -O booklore.svg https://cdn.jsdelivr.net/gh/selfhst/icons@main/svg/booklore.svg
+
+wget -O metube.svg https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/metube.svg
+
+wget -O ytdlpwebplayer.svg https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/yt-dlp.svg
