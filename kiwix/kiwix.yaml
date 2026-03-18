@@ -2,7 +2,7 @@ version: '3.8'
 services:
   kiwix-wikipedia2007:
     image: ghcr.io/kiwix/kiwix-serve:latest
-    container_name: kiwix-wiki
+    container_name: kiwix-wikipedia2007
     volumes:
       - /home/sam/hoard/ZimFiles/wikipedia_en_wp1-0.5_2007-03.zim:/data/wikipedia2007.zim
     command: ["/data/content.zim"]
@@ -12,7 +12,7 @@ services:
 
   kiwix-wikipedia2009:
     image: ghcr.io/kiwix/kiwix-serve:latest
-    container_name: kiwix-wiki
+    container_name: kiwix-wikipedia2009
     volumes:
       - /home/sam/hoard/ZimFiles/wikipedia_en_wp1-0.7_2009-05.zim:/data/wikipedia2009.zim
     command: ["/data/content.zim"]
@@ -22,7 +22,7 @@ services:
 
   kiwix-wikipedia2010:
     image: ghcr.io/kiwix/kiwix-serve:latest
-    container_name: kiwix-wiki
+    container_name: kiwix-wikipedia2010
     volumes:
       - /home/sam/hoard/ZimFiles/wikipedia_en_wp1-0.8_orig_2010-12.zim:/data/wikipedia2010.zim
     command: ["/data/content.zim"]
