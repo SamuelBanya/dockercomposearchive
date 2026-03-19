@@ -1,7 +1,9 @@
 #!/bin/bash
 
 # Arch wiki:
-wget -O ~/Downloads/archlinux_en_all_maxi_2025-09.zim https://download.kiwix.org/zim/other/archlinux_en_all_maxi_2025-09.zim
+wget -O ~/hoard/ZimFiles/archlinux_en_all_maxi_2025-09.zim \
+https://download.kiwix.org/zim/other/archlinux_en_all_maxi_2025-09.zim
 
 # Stardew Valley wiki:
-wget -O ~/Downloads/stardewvalleywiki_en_all_2026-01.zim https://download.kiwix.org/zim/other/stardewvalleywiki_en_all_2026-01.zim
+wget -O ~/hoard/ZimFiles/archlinux_en_all_maxi_2025-09.zim \
+https://download.kiwix.org/zim/other/archlinux_en_all_maxi_2025-09.zim
