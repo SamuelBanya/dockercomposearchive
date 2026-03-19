@@ -8,5 +8,5 @@ services:
       - /home/sam/hoard/ZimFiles/:/data/
     command: ["--port=8081", "--address=all", "/data/*.zim"]
     ports:
-      - "8080:8081"
+      - "8085:8081"
     restart: unless-stopped
