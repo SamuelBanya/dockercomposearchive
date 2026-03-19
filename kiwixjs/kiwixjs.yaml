@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  kiwix-js:
+    image: ghcr.io/kiwix/kiwix-js:latest
+    container_name: kiwix-js
+    ports:
+      - "8090:80"
+    volumes:
+      - /home/sam/hoard/ZimFiles:/data
+    restart: unless-stopped
