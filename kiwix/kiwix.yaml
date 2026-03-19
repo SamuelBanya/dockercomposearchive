@@ -6,9 +6,9 @@ services:
     container_name: kiwix-wikipedia2007
     volumes:
       - /home/sam/hoard/ZimFiles/wikipedia_en_wp1-0.5_2007-03.zim:/data/wikipedia2007.zim
-    command: ["/data/wikipedia2007.zim"]
+    command: ["--port=8080", "--address=all", "/data/wikipedia2007.zim"]
     ports:
-      - "8082:80"
+      - "8082:8080"
     restart: unless-stopped
 
   kiwix-wikipedia2009:
@@ -16,9 +16,9 @@ services:
     container_name: kiwix-wikipedia2009
     volumes:
       - /home/sam/hoard/ZimFiles/wikipedia_en_wp1-0.7_2009-05.zim:/data/wikipedia2009.zim
-    command: ["/data/wikipedia2009.zim"]
+    command: ["--port=8080", "--address=all", "/data/wikipedia2009.zim"]
     ports:
-      - "8083:80"
+      - "8083:8080"
     restart: unless-stopped
 
   kiwix-wikipedia2010:
@@ -26,7 +26,7 @@ services:
     container_name: kiwix-wikipedia2010
     volumes:
       - /home/sam/hoard/ZimFiles/wikipedia_en_wp1-0.8_orig_2010-12.zim:/data/wikipedia2010.zim
-    command: ["/data/wikipedia2010.zim"]
+    command: ["--port=8080", "--address=all", "/data/wikipedia2010.zim"]
     ports:
-      - "8084:80"
+      - "8084:8080"
     restart: unless-stopped
