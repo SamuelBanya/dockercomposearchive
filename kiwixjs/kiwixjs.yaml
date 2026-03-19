@@ -8,6 +8,6 @@ services:
       - "8090:80"
     volumes:
       - /home/sam/kiwix-js/kiwix-js-pwa/www:/usr/share/nginx/html:ro
-      - /home/sam/kiwix-js/kiwix-js-pwa/nginx.conf:/etc/nginx/conf.d/default.conf:ro
-      - /home/sam/kiwix-js/kiwix-js-pwa/ZimFiles:/data:ro
+      - /home/sam/kiwix-js/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+      - /home/sam/hoard/ZimFiles:/data:ro
     restart: unless-stopped
