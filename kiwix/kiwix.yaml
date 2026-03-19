@@ -36,3 +36,15 @@ services:
     ports:
       - "8083:8080"
     restart: unless-stopped
+
+  terraria-wiki-10-2025:
+    image: ghcr.io/kiwix/kiwix-serve:latest
+    container_name: terraria-wiki-10-2025
+    # Link for actual Zim file:
+    # https://mirror.download.kiwix.org/zim/.hidden/dev/terrariawiki_en_2025-10.zim
+    volumes:
+      - /home/sam/hoard/ZimFiles/terrariawiki_en_2025-10.zim:/data/terrariawiki-10-2025.zim
+    command: ["/data/terrariawiki-10-2025.zim"]
+    ports:
+      - "8084:8080"
+    restart: unless-stopped
