@@ -1,13 +1,32 @@
 version: '3.8'
 
 services:
-  kiwix-all:
+  kiwix-wikipedia-2007:
     image: ghcr.io/kiwix/kiwix-serve:latest
-    container_name: kiwix-all
+    container_name: kiwix-2007
     volumes:
-      - /home/sam/hoard/ZimFiles/:/data/
-    command: ["--address=all", "/data/*.zim"]
-    # Map Host 8085 to Container 8080 (the default internal port)
+      - /home/sam/hoard/ZimFiles/wikipedia_en_wp1-0.5_2007-03.zim:/data/wikipedia.zim
+    command: ["/data/wikipedia.zim"]
     ports:
-      - "8085:8080"
+      - "8082:8080"
+    restart: unless-stopped
+
+  kiwix-wikipedia-2009:
+    image: ghcr.io/kiwix/kiwix-serve:latest
+    container_name: kiwix-2009
+    volumes:
+      - /home/sam/hoard/ZimFiles/wikipedia_en_wp1-0.7_2009-05.zim:/data/wikipedia.zim
+    command: ["/data/wikipedia.zim"]
+    ports:
+      - "8083:8080"
+    restart: unless-stopped
+
+  kiwix-wikipedia-2010:
+    image: ghcr.io/kiwix/kiwix-serve:latest
+    container_name: kiwix-2010
+    volumes:
+      - /home/sam/hoard/ZimFiles/wikipedia_en_wp1-0.8_orig_2010-12.zim:/data/wikipedia.zim
+    command: ["/data/wikipedia.zim"]
+    ports:
+      - "8084:8080"
     restart: unless-stopped
