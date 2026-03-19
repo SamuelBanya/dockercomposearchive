@@ -25,18 +25,6 @@ services:
       - "8083:8080"
     restart: unless-stopped
 
-  minecraft-wiki-02-2026:
-    image: ghcr.io/kiwix/kiwix-serve:latest
-    container_name: minecraft-wiki-02-2026
-    # Link for actual Zim file:
-    # https://download.kiwix.org/zim/other/minecraftwiki_en_all_maxi_2026-02.zim
-    volumes:
-      - /home/sam/hoard/ZimFiles/minecraftwiki_en_all_maxi_2026-02.zim:/data/minecraftwiki-02-2026.zim
-    command: ["/data/minecraftwiki-02-2026.zim"]
-    ports:
-      - "8083:8080"
-    restart: unless-stopped
-
   terraria-wiki-10-2025:
     image: ghcr.io/kiwix/kiwix-serve:latest
     container_name: terraria-wiki-10-2025
