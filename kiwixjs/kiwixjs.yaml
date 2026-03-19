@@ -2,10 +2,11 @@ version: '3.8'
 
 services:
   kiwix-js:
-    image: ghcr.io/kiwix/kiwix-js:latest
+    image: nginx:alpine
     container_name: kiwix-js
     ports:
       - "8090:80"
     volumes:
-      - /home/sam/hoard/ZimFiles:/data
+      - /home/sam/kiwix-js/kiwix-js-4.3.0/www:/usr/share/nginx/html:ro
+      - /home/sam/hoard/ZimFiles:/data:ro
     restart: unless-stopped
