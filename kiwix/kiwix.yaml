@@ -1,32 +1,38 @@
 version: '3.8'
 
 services:
-  kiwix-wikipedia-2007:
+  arch-wiki-09-2025:
     image: ghcr.io/kiwix/kiwix-serve:latest
-    container_name: kiwix-2007
+    container_name: arch-wiki-09-2025
+    # Link for actual Zim file:
+    # https://download.kiwix.org/zim/other/archlinux_en_all_maxi_2025-09.zim
     volumes:
-      - /home/sam/hoard/ZimFiles/wikipedia_en_wp1-0.5_2007-03.zim:/data/wikipedia.zim
-    command: ["/data/wikipedia.zim"]
+      - /home/sam/hoard/ZimFiles/archlinux_en_all_maxi_2025-09.zim:/data/archwiki-09-2025.zim
+    command: ["/data/archwiki-09-2025.zim"]
     ports:
       - "8082:8080"
     restart: unless-stopped
 
-  kiwix-wikipedia-2009:
+  stardew-valley-wiki-01-2026:
     image: ghcr.io/kiwix/kiwix-serve:latest
-    container_name: kiwix-2009
+    container_name: stardew-valley-wiki-01-2026
+    # Link for actual Zim file:
+    # https://download.kiwix.org/zim/other/stardewvalleywiki_en_all_2026-01.zim
     volumes:
-      - /home/sam/hoard/ZimFiles/wikipedia_en_wp1-0.7_2009-05.zim:/data/wikipedia.zim
-    command: ["/data/wikipedia.zim"]
+      - /home/sam/hoard/ZimFiles/stardewvalleywiki_en_all_2026-01.zim:/data/stardewvalleywiki-01-2026.zim
+    command: ["/data/stardewvalleywiki-01-2026.zim"]
     ports:
       - "8083:8080"
     restart: unless-stopped
 
-  kiwix-wikipedia-2010:
+  minecraft-wiki-02-2026:
     image: ghcr.io/kiwix/kiwix-serve:latest
-    container_name: kiwix-2010
+    container_name: minecraft-wiki-02-2026
+    # Link for actual Zim file:
+    # https://download.kiwix.org/zim/other/minecraftwiki_en_all_maxi_2026-02.zim
     volumes:
-      - /home/sam/hoard/ZimFiles/wikipedia_en_wp1-0.8_orig_2010-12.zim:/data/wikipedia.zim
-    command: ["/data/wikipedia.zim"]
+      - /home/sam/hoard/ZimFiles/minecraftwiki_en_all_maxi_2026-02.zim:/data/minecraftwiki-02-2026.zim
+    command: ["/data/minecraftwiki-02-2026.zim"]
     ports:
-      - "8084:8080"
+      - "8083:8080"
     restart: unless-stopped
