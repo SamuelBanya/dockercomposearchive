@@ -26,3 +26,9 @@ wget -O booklore.svg https://cdn.jsdelivr.net/gh/selfhst/icons@main/svg/booklore
 wget -O metube.svg https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/metube.svg
 
 wget -O ytdlpwebplayer.svg https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/yt-dlp.svg
+
+wget -O archlinux.svg https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/arch-linux.svg
+
+wget -O stardewvalley.png https://static.wikia.nocookie.net/logopedia/images/1/19/Stardew_valley_logo_by_mathiashenr-d9v3355.png/revision/latest/scale-to-width-down/1000?cb=20180129232655
+
+wget -O kiwix.svg https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/kiwix-light.svg
