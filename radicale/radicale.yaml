@@ -1,0 +1,11 @@
+version: "2.1"
+services:
+  radicale:
+    image: ghcr.io/kozea/radicale:3.5.4
+    user: root
+    ports:
+      - "5232:5232"
+    volumes:
+      - /home/sam/radicale/config:/etc/radicale:ro
+      - /home/sam/radicale/data:/var/lib/radicale
+    restart: unless-stopped
