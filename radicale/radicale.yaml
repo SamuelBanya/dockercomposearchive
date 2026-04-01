@@ -1,11 +1,35 @@
-version: "2.1"
 services:
   radicale:
-    image: ghcr.io/kozea/radicale:3.5.4
-    user: root
+    image: ghcr.io/kozea/radicale:stable
+    container_name: radicale
     ports:
       - "5232:5232"
+    init: true
+    read_only: true
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    cap_add:
+      - SETUID
+      - SETGID
+      - CHOWN
+      - KILL
+    deploy:
+      resources:
+        limits:
+          memory: 256M
+          pids: 50
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://127.0.0.1:5232"]
+      interval: 30s
+      retries: 3
+      start_period: 10s
+    restart: unless-stopped
     volumes:
       - /home/sam/radicale/config:/etc/radicale:ro
       - /home/sam/radicale/data:/var/lib/radicale
-    restart: unless-stopped
+      - type: tmpfs
+        target: /tmp
+        tmpfs:
+          size: 64M
