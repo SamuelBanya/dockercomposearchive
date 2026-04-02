@@ -8,7 +8,3 @@ services:
     volumes:
       - /home/sam/baikal/config:/var/www/baikal/config
       - /home/sam/baikal/data:/var/www/baikal/Specific
-
-volumes:
-  config:
-  data:
