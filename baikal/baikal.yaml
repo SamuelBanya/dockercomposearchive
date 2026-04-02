@@ -1,0 +1,14 @@
+version: "2"
+services:
+  baikal:
+    image: ckulka/baikal:nginx
+    restart: always
+    ports:
+      - "5232:80"
+    volumes:
+      - /home/sam/baikal/config:/var/www/baikal/config
+      - /home/sam/baikal/data:/var/www/baikal/Specific
+
+volumes:
+  config:
+  data:
