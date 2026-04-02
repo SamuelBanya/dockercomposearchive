@@ -34,3 +34,5 @@ wget -O stardewvalley.png https://static.wikia.nocookie.net/logopedia/images/1/1
 wget -O kiwix.svg https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/kiwix-light.svg
 
 wget -O baikal.png https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/baikal.png
+
+wget -O tileservergl.png https://tileserver.org/images/logo.png
