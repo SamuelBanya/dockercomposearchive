@@ -32,3 +32,5 @@ wget -O archlinux.svg https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/sv
 wget -O stardewvalley.png https://static.wikia.nocookie.net/logopedia/images/1/19/Stardew_valley_logo_by_mathiashenr-d9v3355.png/revision/latest/scale-to-width-down/1000?cb=20180129232655
 
 wget -O kiwix.svg https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/kiwix-light.svg
+
+wget -O baikal.png https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/baikal.png
