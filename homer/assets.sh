@@ -36,3 +36,5 @@ wget -O kiwix.svg https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/ki
 wget -O baikal.png https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/baikal.png
 
 wget -O tileservergl.png https://tileserver.org/images/logo.png
+
+wget -O nextcloud.svg https://cdn.jsdelivr.net/gh/selfhst/icons@main/svg/nextcloud.svg

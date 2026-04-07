@@ -33,6 +33,7 @@ services:
       - MYSQL_USER=${MYSQL_USER}
       - MYSQL_HOST=db
       - REDIS_HOST=redis
+      - TRUSTED_DOMAINS=${TRUSTED_DOMAINS}
 
 volumes:
   db_data:
