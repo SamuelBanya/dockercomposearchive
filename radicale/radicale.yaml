@@ -8,9 +8,6 @@ services:
     read_only: true
     security_opt:
       - no-new-privileges:true
-    environment:
-      - UID=2999
-      - GID=2999
     volumes:
       - /home/sam/radicale/data:/data
       - /home/sam/radicale/config:/config
