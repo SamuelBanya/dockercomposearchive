@@ -12,8 +12,8 @@ services:
       - UID=2999
       - GID=2999
     volumes:
-      - /radicale/data:/data
-      - /radicale/config:/config
+      - /home/sam/radicale/data:/data
+      - /home/sam/radicale/config:/config
     healthcheck:
       test: ["CMD", "curl", "--fail", "http://localhost:5232"]
       interval: 30s
