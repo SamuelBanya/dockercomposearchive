@@ -1,0 +1,21 @@
+services:
+  radicale:
+    image: tomsquest/docker-radicale
+    container_name: radicale
+    ports:
+      - "5232:5232"
+    init: true
+    read_only: true
+    security_opt:
+      - no-new-privileges:true
+    environment:
+      - UID=2999
+      - GID=2999
+    volumes:
+      - /opt/radicale/data:/data
+      - /opt/radicale/config:/config
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "http://localhost:5232"]
+      interval: 30s
+      retries: 3
+    restart: unless-stopped
