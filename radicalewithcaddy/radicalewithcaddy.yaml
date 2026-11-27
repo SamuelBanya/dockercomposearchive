@@ -2,8 +2,6 @@ services:
   radicale:
     image: tomsquest/docker-radicale
     container_name: radicale
-    ports:
-      - "5232:5232"
     init: true
     read_only: true
     security_opt:
@@ -15,4 +13,16 @@ services:
       test: ["CMD", "curl", "--fail", "http://localhost:5232"]
       interval: 30s
       retries: 3
+    restart: unless-stopped
+
+  caddy:
+    image: caddy:latest
+    container_name: caddy
+    ports:
+      - "8443:8443"
+    volumes:
+      - /home/sam/caddy/Caddyfile:/etc/caddy/Caddyfile:ro
+      - /home/sam/caddy/data:/data
+    depends_on:
+      - radicale
     restart: unless-stopped
