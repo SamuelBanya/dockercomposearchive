@@ -11,7 +11,7 @@ services:
     volumes:
       - /home/sam/radicale/data:/data
       - /home/sam/radicale/config:/config
-      - /etc/letsencrypt:/certs:ro
+      - /home/sam/radicale/certs:/certs:ro
     healthcheck:
       test: ["CMD", "curl", "-k", "--fail", "https://localhost:5232"]
       interval: 30s
